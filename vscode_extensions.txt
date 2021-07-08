@@ -1,0 +1,17 @@
+2gua.rainbow-brackets
+alexcvzz.vscode-sqlite
+batisteo.vscode-django
+bigonesystems.django
+Dart-Code.dart-code
+Dart-Code.flutter
+felixfbecker.php-debug
+felixfbecker.php-intellisense
+ms-python.python
+ms-python.vscode-pylance
+ms-toolsai.jupyter
+mtxr.sqltools
+redhat.vscode-commons
+redhat.vscode-xml
+redhat.vscode-yaml
+ritwickdey.LiveServer
+wholroyd.jinja

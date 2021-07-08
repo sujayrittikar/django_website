@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link media="all" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+   <!-- Site-wide style sheet-->
+   
+   <link rel="stylesheet" href="{% static 'allpages/css/stylesheet.css' %}">
+    
+   <!---->
+   <link rel="shortcut icon" href="{% static 'allpages/images/favicon.png' %}">
+   {% block headcontent %} 
+        
+    {% endblock headcontent%} 
+
+    {# If title passed in, use it else, use generic title}
+    <title>
+        {% if title %}
+            {{title}}
+        {% else %}
+            Welcome!
+        {% endif %}
+    </title>
+</head>
+<body>
+    <header>
+        <img src="{% static 'allpages/images/logo.png' %}" alt="">
+        
+    </header>
+    <nav>
+        <a href="{% url 'allpages-home' %}">Home</a>
+        <a href="{% url 'allpages-privacy' %}">Privacy</a>
+        <a href="{% url 'allpages-about' %}">About</a>
+    </nav>
+    <main>
+        {% block maincontent %} 
+        
+        {% endblock maincontent%}
+    </main>
+    <footer>
+        <a href="https://www.linkedin.com/in/sujay-rittikar-296950128/" class="fa fa-linkedin" title="LinkedIn"></a>
+        <a href="https://www.quora.com/profile/Sujay-Rittikar-1" class="fa fa-quora" title="Quora"></a>
+    </footer>
+</body>
+</html>
